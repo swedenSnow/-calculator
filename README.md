@@ -1,6 +1,8 @@
 # React App calculator 
 
-<img width="1268" alt="skarmavbild 2019-01-10 kl 16 36 06" src="https://user-images.githubusercontent.com/31956031/50983434-c2449000-14ff-11e9-82fa-8e685dc02a53.png">
+<img width="585" alt="initial style" src="https://user-images.githubusercontent.com/31956031/51003401-df488580-1536-11e9-8a40-61229e996d6f.png">
+<img width="487" alt="ios style" src="https://user-images.githubusercontent.com/31956031/51003402-e079b280-1536-11e9-9880-32b7155e2f50.png">
+
 
 
 ## Requires 
