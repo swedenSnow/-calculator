@@ -1,32 +1,128 @@
+html {
+  box-sizing: border-box;
+  /* Get root to be 10 instead of 16px, easier to calc */
+  font-size: 10px;
+  
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: auto;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  /* line-height:2; */
+}
+
 .App {
-  text-align: center;
+  height: 400px;
+  width: 300px;
+  background: linear-gradient(45deg, #cad2c5 0%, #abb5aa 100%);
+  transition: transform 0.5s ease 0.5s;
+  position: relative;
+  color:white;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.display {
+  background: #141414;
+  color: rgb(41, 228, 125);
+  text-shadow: 0 0 5px rgba(89, 195, 195, 0.5);
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 29px;
+  box-sizing: border-box;
+  height: 20%;
+  overflow: hidden;
+  font-size: 24px;
+  position: relative;
+}
+
+.display::after {
+  background: white;
+  /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    white 0%,
+    #f1f1f1 50%,
+    #e1e1e1 51%,
+    #f6f6f6 100%
+  );
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    white 0%,
+    #f1f1f1 50%,
+    #e1e1e1 51%,
+    #f6f6f6 100%
+  );
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    white 0%,
+    #f1f1f1 50%,
+    #e1e1e1 51%,
+    #f6f6f6 100%
+  );
+}
+
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  height: 80%;
+}
+
+.button {
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #cad2c5 0%, #abb5aa 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #cad2c5 0%, #abb5aa 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #cad2c5 0%, #abb5aa 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cad2c5', endColorstr='#abb5aa', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 25%;
+  font-size: 24px;
+  color: rgb(26, 26, 26);
+  height: 20%;
+  min-width: 25%;
 }
 
-.App-link {
-  color: #61dafb;
+.button[data-size="2"] {
+  height: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button[data-value="null"] {
+  pointer-events: none;
 }
+
+.button[data-value="clear"] {
+  background: linear-gradient(45deg, #fcfbfd 0%, #ffffff 100%);
+  font-weight: bold;
+}
+
+.button[data-value="clear"]:hover {
+  background: red;
+}
+
+
+.button:hover {
+  background: #d7ddd3;
+  cursor: pointer;
+}
+
+.button:active {
+  background:rgb(41, 228, 125)
+}
+
+
