@@ -9,15 +9,11 @@ import Buttons from './components/Buttons';
 import Display from './components/Display';
 
 class App extends Component {
-	constructor() {
-		super();
-		this.state = {
-			operations: [],
-		};
-	}
+	state = {
+		operations: [],
+	};
 
 	handleClick = e => {
-		console.log(e.target);
 		const value = e.target.getAttribute('data-value');
 		switch (value) {
 			case 'clear':
