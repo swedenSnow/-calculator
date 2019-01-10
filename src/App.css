@@ -25,7 +25,7 @@ body {
 }
 
 .display {
-  background: #141414;
+  background: #3e3c3c;
   color: rgb(41, 228, 125);
   text-shadow: 0 0 5px rgba(89, 195, 195, 0.5);
   display: flex;
@@ -35,7 +35,7 @@ body {
   box-sizing: border-box;
   height: 20%;
   overflow: hidden;
-  font-size: 24px;
+  font-size: 3rem;
   position: relative;
 }
 
@@ -101,25 +101,31 @@ body {
 .button[data-size="2"] {
   height: 40%;
 }
+.button[data-size="2w"] {
+  width: 35%;
+}
 
 .button[data-value="null"] {
   pointer-events: none;
 }
 
-.button[data-value="clear"] {
-  background: linear-gradient(45deg, #fcfbfd 0%, #ffffff 100%);
-  font-weight: bold;
-}
-
 .button[data-value="clear"]:hover {
-  background: red;
+  background: rgb(248, 51, 2);
 }
 
+.button[data-value="+"], [data-value="/"], [data-value="-"], [data-value="*"], [data-value="equal"], [data-value="clear"]{
+  background: linear-gradient(95deg, #7a4b14 0%, #fe9606 100%);
+  font-weight: bold;
+  color: #f1f1f1;
+}
 
 .button:hover {
   background: #d7ddd3;
   cursor: pointer;
+  color:black;
+
 }
+
 
 .button:active {
   background:rgb(41, 228, 125)
